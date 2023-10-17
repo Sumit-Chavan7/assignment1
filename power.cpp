@@ -9,6 +9,13 @@ double power(double base,int pow=2)
         }
     return ret;
 }
+double power(int base, int pow=2)
+{
+if(pow==0)
+    return 1;
+else
+    return base*power(base,pow-1);
+}
 int main() {
     double res,base; 
     int p; 
@@ -21,5 +28,8 @@ int main() {
     res=power(base,p);
     cout<<"\nThe result is : "<<res<<endl;
     cout<<"\nthe value of 2 to power 10 is : "<<power(2,10)<<endl;
+    int b=8;
+    double p=3;
+    cout<<power(b,p);
     return 0;
 }
